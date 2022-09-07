@@ -5,10 +5,10 @@ Bienvenidos a World of HIT A.K.A. WoH. WoH es un juego MMORPG NO LINEAL.
 
 El objetivo principal de este ejercicio es evaluar tu proceso para resolver problemas, como tu habilidad para escribir codigo entendible, limpio y reusable. No hay reglas estrictas o preguntas engañosas.
 
-## Introduccion
+## Introducción
 
 
-Queremos desarrollar una API para un juego PvP (Player vs Player) donde dos jugadores se enfrentaran hasta que solo uno quede en pie. Los jugadores podran tener equipados items que los ayuden en sus batallas.
+Queremos desarrollar una API para un juego PvP (Player vs. Player) donde dos jugadores se enfrentarán hasta que solo uno quede en pie. Los jugadores podrán tener equipados items que los ayuden en sus batallas.
 
 ## 📜 Instrucciones
 
@@ -23,8 +23,8 @@ Queremos desarrollar una API para un juego PvP (Player vs Player) donde dos juga
         - 🧟‍♂️Zombie
 - Al crearse un jugador comienza con ❤️ 100 puntos de vida.
 - Si el jugador no tiene items, por defecto tiene 5 puntos de ataque 🗡 y 5 puntos de defensa 🛡.
-- Los puntos de ataque 🗡 de un jugador estan dados por sus 5 puntos + la sumatoria de puntos ataque de sus items.
-- Los puntos de defensa 🛡 de un jugador estan dados por sus 5 puntos + la sumatoria de puntos de defensa de sus items.
+- Los puntos de ataque 🗡 de un jugador están dados por sus 5 puntos + la sumatoria de puntos ataque de sus items.
+- Los puntos de defensa 🛡 de un jugador están dados por sus 5 puntos + la sumatoria de puntos de defensa de sus items.
 
 ### ⚒ Items
 
@@ -36,7 +36,7 @@ Queremos desarrollar una API para un juego PvP (Player vs Player) donde dos juga
         - ⚔️ Arma
     - Cantidad de puntos de defensa 🛡. Pueden ser 0.
     - Cantidad de puntos de ataque 🗡. Pueden ser 0.
-- Un jugador puede tener equipado solo un item de cada tipo pero puede tener un inventario con todos los items que quiera.
+- Un jugador puede tener equipado solo un item de cada tipo, pero puede tener un inventario con todos los items que quiera.
 
 ### 🤺Ataque
 
@@ -46,8 +46,8 @@ Queremos desarrollar una API para un juego PvP (Player vs Player) donde dos juga
     - Ulti 💀. Daño total = Puntos de ataque x 2.
 - Cada ataque le resta vida al otro jugador. La cantidad de vida que pierde el defensor es Daño total ataque - Puntos de defensa del defensor.
 - Como minimo un ataque saca 1 punto de ❤️ vida al defensor.
-- Para tirar la Ulti el ultimo ataque tuvo que haber sido un ataque a cuerpo a cuerpo.
-- No se puede atacar a jugadores que ya estan muertos.
+- Para tirar la Ulti el último ataque tuvo que haber sido un ataque cuerpo a cuerpo.
+- No se puede atacar a jugadores que ya están muertos.
 
 ## ✅ Tareas
 

@@ -1,6 +1,5 @@
 # World of HIT (WoH) - Backend Challenge
 
----
 
 Bienvenidos a World of HIT A.K.A. WoH. WoH es un juego MMORPG NO LINEAL.
 
@@ -8,13 +7,11 @@ El objetivo principal de este ejercicio es evaluar tu proceso para resolver prob
 
 ## Introduccion
 
----
 
 Queremos desarrollar una API para un juego PvP (Player vs Player) donde dos jugadores se enfrentaran hasta que solo uno quede en pie. Los jugadores podran tener equipados items que los ayuden en sus batallas.
 
 ## 📜 Instrucciones
 
----
 
 ### 🙍🏻‍♂️Jugador
 
@@ -54,7 +51,6 @@ Queremos desarrollar una API para un juego PvP (Player vs Player) donde dos juga
 
 ## ✅ Tareas
 
----
 
 Definir una REST API que permita cumplir con los siguientes requerimientos.
 

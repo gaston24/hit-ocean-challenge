@@ -1,64 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# World of HIT (WoH) - Backend Challenge
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+Bienvenidos a World of HIT A.K.A. WoH. WoH es un juego MMORPG NO LINEAL.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+El objetivo principal de este ejercicio es evaluar tu proceso para resolver problemas, como tu habilidad para escribir codigo entendible, limpio y reusable. No hay reglas estrictas o preguntas engañosas.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Introduccion
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+Queremos desarrollar una API para un juego PvP (Player vs Player) donde dos jugadores se enfrentaran hasta que solo uno quede en pie. Los jugadores podran tener equipados items que los ayuden en sus batallas.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📜 Instrucciones
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+### 🙍🏻‍♂️Jugador
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Cada jugador tiene:
+    - Nombre
+    - Email
+    - Tipo
+        - 👨🏻Humano
+        - 🧟‍♂️Zombie
+- Al crearse un jugador comienza con ❤️ 100 puntos de vida.
+- Si el jugador no tiene items, por defecto tiene 5 puntos de ataque 🗡 y 5 puntos de defensa 🛡.
+- Los puntos de ataque 🗡 de un jugador estan dados por sus 5 puntos + la sumatoria de puntos ataque de sus items.
+- Los puntos de defensa 🛡 de un jugador estan dados por sus 5 puntos + la sumatoria de puntos de defensa de sus items.
 
-### Premium Partners
+### ⚒ Items
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Cada item tiene:
+    - Nombre
+    - Tipo
+        - 🥾Bota
+        - 🧥Armadura
+        - ⚔️ Arma
+    - Cantidad de puntos de defensa 🛡. Pueden ser 0.
+    - Cantidad de puntos de ataque 🗡. Pueden ser 0.
+- Un jugador puede tener equipado solo un item de cada tipo pero puede tener un inventario con todos los items que quiera.
 
-## Contributing
+### 🤺Ataque
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Existen tres tipos de ataque:
+    - Cuerpo a cuerpo ⚔️. Daño total = Puntos de ataque.
+    - A distancia 🏹. Daño total = Puntos de ataque * 0.8.
+    - Ulti 💀. Daño total = Puntos de ataque x 2.
+- Cada ataque le resta vida al otro jugador. La cantidad de vida que pierde el defensor es Daño total ataque - Puntos de defensa del defensor.
+- Como minimo un ataque saca 1 punto de ❤️ vida al defensor.
+- Para tirar la Ulti el ultimo ataque tuvo que haber sido un ataque a cuerpo a cuerpo.
+- No se puede atacar a jugadores que ya estan muertos.
 
-## Code of Conduct
+## ✅ Tareas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+Definir una REST API que permita cumplir con los siguientes requerimientos.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Como administrador quiero dar de alta un jugador.
+- Como administrador quiero dar de alta y modificar items.
+- Como jugador quiero equiparme un item.
+- Como jugador quiero atacar a otro jugador con un golpe cuerpo a cuerpo.
+- Como jugador quiero atacar a otro jugador con un golpe a distancia.
+- Como jugador quiero atacar a otro jugador con mi ulti.
+- Como administrador queremos ver que jugadores pueden tirar su ulti.
 
-## License
+**Extras**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Hacer test unitarios
+- Hostear la solucion
+
+## 🤝 Entregable
+
+---
+
+- Se debe entregar un repo de github con la solución
+- Puede estar programado en cualquier framework MVC. (si es en laravel mejor)

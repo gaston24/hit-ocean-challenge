@@ -69,7 +69,6 @@ Definir una REST API que permita cumplir con los siguientes requerimientos.
 
 ## 🤝 Entregable
 
----
 
 - Se debe entregar un repo de github con la solución
 - Puede estar programado en cualquier framework MVC. (si es en laravel mejor)

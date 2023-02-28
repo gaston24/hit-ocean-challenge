@@ -24,6 +24,13 @@ class AuthController extends Controller
         return response()->json(['error' => 'Unauthorized'], 401);
     }
 
+    public function test(Request $request)
+    {  
+        $response = 'hola mundo';
+
+        return response()->json(['msg' => $response, 200]);
+    }
+
     protected function respondWithToken($token)
     {        
  

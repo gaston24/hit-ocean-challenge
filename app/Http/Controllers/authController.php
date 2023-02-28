@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
-class AuthController extends Controller
+class AuthController extends BaseController
 {
     public function __construct()
     {
@@ -18,27 +18,24 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if ($token = Auth::attempt($credentials)) {
             
-            return $this->respondWithToken($token);
+            $response = $this->respondWithToken($token);
+
+            return $this->sendResponse($response, "User logged in");
         }
 
-        return response()->json(['error' => 'Unauthorized'], 401);
-    }
-
-    public function test(Request $request)
-    {  
-        $response = 'hola mundo';
-
-        return response()->json(['msg' => $response, 200]);
+        return $this->sendError("Unauthorized", [], 401);
     }
 
     protected function respondWithToken($token)
     {        
  
-        return response()->json([
+        $response = [
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
-        ]);
+        ];
+
+        return $this->sendResponse($response, "Access token");
     }
 
     public function create(Request $request) {
@@ -61,9 +58,12 @@ class AuthController extends Controller
       
             $user->password = bcrypt($password);
        
-            $user->save();
-            return response()->json(['msg' => 'user added']);
+            $response = $user->save();
+            
+            return $this->sendResponse($response, "User added");
         }
+
+        return $this->sendError("Missing parameters", [], 401);
     
     }
 }

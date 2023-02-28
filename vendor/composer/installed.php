@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v9.3.7',
-        'version' => '9.3.7.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '5589658b826c683bef2e2aad75905103e62d5a5a',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -349,6 +349,15 @@
                 0 => 'v9.28.0',
             ),
         ),
+        'jfcherng/php-mb-string' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jfcherng/php-mb-string',
+            'aliases' => array(),
+            'reference' => 'bad313900ad7632f6de37330d653ed34608c86f9',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -365,12 +374,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v9.3.7',
-            'version' => '9.3.7.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '5589658b826c683bef2e2aad75905103e62d5a5a',
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
@@ -416,6 +425,24 @@
             'install_path' => __DIR__ . '/../laravel/tinker',
             'aliases' => array(),
             'reference' => 'dff39b661e827dae6e092412f976658df82dbac5',
+            'dev_requirement' => false,
+        ),
+        'lcobucci/clock' => array(
+            'pretty_version' => '3.0.0',
+            'version' => '3.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../lcobucci/clock',
+            'aliases' => array(),
+            'reference' => '039ef98c6b57b101d10bd11d8fdfda12cbd996dc',
+            'dev_requirement' => false,
+        ),
+        'lcobucci/jwt' => array(
+            'pretty_version' => '4.3.0',
+            'version' => '4.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../lcobucci/jwt',
+            'aliases' => array(),
+            'reference' => '4d7de2fe0d51a96418c0d04004986e410e87f6b4',
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(
@@ -622,6 +649,21 @@
             'reference' => 'd0aa6097bef9fd42458a9b3c49da32c6ce6129c5',
             'dev_requirement' => true,
         ),
+        'psr/clock' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/clock',
+            'aliases' => array(),
+            'reference' => 'e41a24703d4560fd0acb709162f73b8adfc3aa0d',
+            'dev_requirement' => false,
+        ),
+        'psr/clock-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
         'psr/container' => array(
             'pretty_version' => '2.0.2',
             'version' => '2.0.2.0',
@@ -709,8 +751,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -1212,6 +1254,15 @@
             'install_path' => __DIR__ . '/../tijsverkoyen/css-to-inline-styles',
             'aliases' => array(),
             'reference' => 'da444caae6aca7a19c0c140f68c6182e337d5b1c',
+            'dev_requirement' => false,
+        ),
+        'tymon/jwt-auth' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tymon/jwt-auth',
+            'aliases' => array(),
+            'reference' => 'b0868a5b00801889a9e0c81a737963d8004e708c',
             'dev_requirement' => false,
         ),
         'vlucas/phpdotenv' => array(

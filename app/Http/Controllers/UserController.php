@@ -116,7 +116,7 @@ class UserController extends BaseController
 
                 'name'=>$item->name,
                 'item_type'=>$item->item_type,
-                'armor_points'=>$item->armor_points,
+                'armour_points'=>$item->armour_points,
                 'attack_points'=>$item->attack_points,
 
             ]);
@@ -144,7 +144,7 @@ class UserController extends BaseController
             $form = [
                 'name'=>$item->name,
                 'item_type'=>$item->item_type,
-                'armor_points'=>$item->armor_points,
+                'armour_points'=>$item->armour_points,
                 'attack_points'=>$item->attack_points
             ];
 

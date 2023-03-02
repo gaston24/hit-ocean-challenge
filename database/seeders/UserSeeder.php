@@ -18,6 +18,17 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
+                "id" => 1,
+                "name" => "admin",
+                "email" => "admin@admin.com",
+                'password' => bcrypt('123456'),
+                'player_type' => '',
+                'user_type' => 'a',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                "id" => 2,
                 "name" => "Gaston",
                 "email" => "gaston.marcilio@gmail.com",
                 'password' => bcrypt('123456'),
@@ -27,6 +38,7 @@ class UserSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
+                "id" => 3,
                 "name" => "Paulo",
                 "email" => "paulo@gmail.com",
                 'password' => bcrypt('123456'),
@@ -35,15 +47,7 @@ class UserSeeder extends Seeder
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
-            [
-                "name" => "admin",
-                "email" => "admin@admin.com",
-                'password' => bcrypt('123456'),
-                'player_type' => '',
-                'user_type' => 'a',
-                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ],
+
 
 
         ];

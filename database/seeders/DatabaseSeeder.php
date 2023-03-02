@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TypeAttackSeeder::class,
             UserSeeder::class,
+            UserLifeSeeder::class,
 
         ]);
 

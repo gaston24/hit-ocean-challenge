@@ -12,7 +12,7 @@ class Item extends Model
     protected $fillable = [
         'name',
         'item_type',
-        'armor_points',
+        'armour_points',
         'attack_points',
     ];
 }

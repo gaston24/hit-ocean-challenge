@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('item_type');
-            $table->integer('armor_points')->default(0);
+            $table->integer('armour_points')->default(0);
             $table->integer('attack_points')->default(0);
             $table->timestamps();
         });

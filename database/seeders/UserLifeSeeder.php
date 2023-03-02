@@ -16,7 +16,7 @@ class UserLifeSeeder extends Seeder
      */
     public function run()
     {
-        $user_lifes = [
+        $user_lives = [
             [
                 "id" => 1,
                 "user_id" => 2,
@@ -36,7 +36,7 @@ class UserLifeSeeder extends Seeder
 
         ];
 
-        DB::table('user_lifes')->delete();
-        DB::table('user_lifes')->insert($user_lifes);
+        DB::table('user_lives')->delete();
+        DB::table('user_lives')->insert($user_lives);
     }
 }

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('type_attacks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('power');
+            $table->double('power', 8, 2);
             $table->timestamps();
         });
     }

@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder
             TypeAttackSeeder::class,
             UserSeeder::class,
             UserLifeSeeder::class,
+            ItemsSeeder::class,
+            InventorySeeder::class,
+            ItemEquippedSeeder::class,
 
         ]);
 

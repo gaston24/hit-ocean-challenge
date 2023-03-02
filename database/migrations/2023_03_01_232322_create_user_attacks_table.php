@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('user_attacks', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
-            $table->integer('attack_points');
+            $table->double('attack_points', 8, 2);
             $table->timestamps();
         });
     }

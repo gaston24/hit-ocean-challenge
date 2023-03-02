@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('user_attack_id');
             $table->string('user_affected_id');
-            $table->string('type_attack_id');
+            $table->string('type_attack');
             $table->timestamps();
         });
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\UserLife;
 
 class AuthController extends BaseController
 {
@@ -40,30 +41,32 @@ class AuthController extends BaseController
 
     public function create(Request $request) {
         
-        $name = $request->input("name");
-        $email = $request->input("email");
-        $password = $request->input("password");
+        $user = $request;
         
-        if(!empty($name) && !empty($email) && !empty($password)) {
+        if(!empty($user->name) && !empty($user->email) && !empty($user->password) && !empty($user->user_type)) {
             
-            $user = new User();
-            $user->name=$name;
-            $user->email = $email;    
-            $valiEmail = User::where('email', $email)->first();
-            if(!empty($valiEmail['email'])) {
-                return view('register', [
-                    "information"=> "email exist"
-                ]);  
+            $newUser = User::create([
+
+                'name' => $user->name,
+                'email' => $user->email,
+                'player_type' => $user->player_type,
+                'user_type' => $user->user_type,
+                'password' => bcrypt($user->password)
+
+            ]);
+
+            if($user->user_type == "p") {
+                $newUserLife = UserLife::create([
+                    'user_id' => $newUser->id, 
+                    'life_points' => 100
+                ]);
             }
-      
-            $user->password = bcrypt($password);
-       
-            $response = $user->save();
             
-            return $this->sendResponse($response, "User added");
+            return $this->sendResponse([$newUser, $newUserLife], "User added");
         }
 
         return $this->sendError("Missing parameters", [], 401);
     
     }
+
 }

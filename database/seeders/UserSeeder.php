@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class TypeAttackSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,30 +16,39 @@ class TypeAttackSeeder extends Seeder
      */
     public function run()
     {
-        $type_attacks = [
+        $users = [
             [
-                "name" => "cc",
-                "power" => "1",
+                "name" => "Gaston",
+                "email" => "gaston.marcilio@gmail.com",
+                'password' => bcrypt('123456'),
+                'player_type' => 'h',
+                'user_type' => 'p',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                "name" => "d",
-                "power" => "0.8",
+                "name" => "Paulo",
+                "email" => "paulo@gmail.com",
+                'password' => bcrypt('123456'),
+                'player_type' => 'z',
+                'user_type' => 'p',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                "name" => "u",
-                "power" => "2",
+                "name" => "admin",
+                "email" => "admin@admin.com",
+                'password' => bcrypt('123456'),
+                'player_type' => '',
+                'user_type' => 'a',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-            ]
+            ],
+
 
         ];
 
-        DB::table('type_attacks')->delete();
-        DB::table('type_attacks')->insert($type_attacks);
+        DB::table('users')->delete();
+        DB::table('users')->insert($users);
     }
 }
-?>

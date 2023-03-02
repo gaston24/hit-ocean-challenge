@@ -18,6 +18,7 @@ class ItemsSeeder extends Seeder
     {
         $items = [
             [
+                "id" => "1",
                 "name" => "armadura",
                 "item_type" => "armadura",
                 "armour_points" => "10",
@@ -26,6 +27,7 @@ class ItemsSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
+                "id" => "2",
                 "name" => "bota",
                 "item_type" => "bota",
                 "armour_points" => "3",
@@ -34,6 +36,7 @@ class ItemsSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
+                "id" => "3",
                 "name" => "espada",
                 "item_type" => "arma",
                 "armour_points" => "0",
@@ -42,6 +45,7 @@ class ItemsSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
+                "id" => "4",
                 "name" => "escopeta",
                 "item_type" => "arma",
                 "armour_points" => "0",
